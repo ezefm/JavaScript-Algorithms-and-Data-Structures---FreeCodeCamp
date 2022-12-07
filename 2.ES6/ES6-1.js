@@ -79,3 +79,66 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 
 //Modify the function increment by adding default parameters so 
 //that it will add 1 to number if value is not specified.
+
+const increment = (number, value = 1) => number + value;
+
+
+//FreeCodeCamp (7) - JavaScript Algorithms and Data Structures - ES6
+
+/*
+Modify the function sum using the rest parameter in such a way that the function sum 
+is able to take any number of arguments and return their sum.
+*/
+
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+
+//FreeCodeCamp (8) - JavaScript Algorithms and Data Structures - ES6
+//Copy all contents of arr1 into another array arr2 using the spread operator.
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // Change this line
+
+console.log(arr2);
+
+//FreeCodeCamp (9) - JavaScript Algorithms and Data Structures - ES6
+
+/*
+Replace the two assignments with an equivalent destructuring assignment. 
+It should still assign the variables today and tomorrow the values of 
+today and tomorrow from the HIGH_TEMPERATURES object.
+*/
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+
+const { today, tomorrow } = HIGH_TEMPERATURES;
+
+console.log(today, tomorrow);
+
+
+//FreeCodeCamp (10) - JavaScript Algorithms and Data Structures - ES6
+
+/*
+Replace the two assignments with an equivalent destructuring assignment. 
+It should still assign the variables highToday and highTomorrow the values 
+of today and tomorrow from the HIGH_TEMPERATURES object.
+*/
+
+const HIGH_TEMPERATURES1 = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code above this line
+
+const { today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES1;
